@@ -1,0 +1,19 @@
+{
+    "name": "Schrutify",
+    "version": "1.0",
+    "description": "Somewhere Between A Snake And A Mongoose.",
+  
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["jquery-3.5.1.min.js", "schrutify.js"]
+      }
+    ],
+  
+    "permissions": [
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+    ],
+    "manifest_version": 2
+  }
