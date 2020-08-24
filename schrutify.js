@@ -1,15 +1,15 @@
 const path = 'https://github.com/atulumello/schrutify/blob/master/schrutes/'
 const raw = '?raw=true'
 const schrutes = [
-    path + 'schrute_1.jpg' + raw,
-    path + 'schrute_2.jpg' + raw,
-    path + 'schrute_3.gif' + raw,
-    path + 'schrute_4.gif' + raw,
-    path + 'schrute_5.gif' + raw,
-    path + 'schrute_6.gif' + raw,
-    path + 'schrute_7.png' + raw,
-    path + 'schrute_8.jpg' + raw,
-    path + 'schrute_9.gif' + raw
+    'schrute_1.jpg',
+    'schrute_2.jpg',
+    'schrute_3.gif',
+    'schrute_4.gif',
+    'schrute_5.gif',
+    'schrute_6.gif',
+    'schrute_7.png',
+    'schrute_8.jpg',
+    'schrute_9.gif'
 ]
 
 $(document).ready(function() {
@@ -23,7 +23,7 @@ const schrutify = () => {
     setTimeout(function(){
         $("img").each(function(){
             var randomSchrute = schrutes[Math.floor(Math.random()*schrutes.length)]
-            $(this).attr("src" , randomSchrute)
+            $(this).attr("src" , `${path}${randomSchrute}${raw}`)
         })
     } , 2000)
 }
